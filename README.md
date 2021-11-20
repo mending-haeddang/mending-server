@@ -34,7 +34,7 @@
 
 ## Directory Structure
 ```
-DaangnMarket_server
+Melting_server
 |
 |- .gitignore
 |- .firebaserc
