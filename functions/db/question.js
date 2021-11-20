@@ -12,4 +12,13 @@ const getQuestion = async (client, teamID) => {
     return convertSnakeToCamel.keysToCamel(rows);
   };
 
-  module.exports = { getQuestion };
+const getAllQuestions = async (client) => {
+    const { rows } = await client.query(
+        `
+        SELECT * FROM question q
+        `
+    );
+    return convertSnakeToCamel.keysToCamel(rows);
+}
+
+module.exports = { getQuestion, getAllQuestions };
